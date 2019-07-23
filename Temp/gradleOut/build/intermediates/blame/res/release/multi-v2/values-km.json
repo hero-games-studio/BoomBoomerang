@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/melihcol/Documents/GitHub/BoomBoomerang/Temp/gradleOut/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-km/values-km.xml",
+            "map": [
+                {
+                    "source": "/Users/melihcol/.gradle/caches/transforms-1/files-1.1/com.google.android.gms.play-services-basement-15.0.1.aar/87527b1bc23ce3c3ce31a9348f5b701c/res/values-km/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "207",
+                        "endOffsets": "454"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "1860",
+                        "endColumns": "207",
+                        "endOffsets": "2063"
+                    }
+                },
+                {
+                    "source": "/Users/melihcol/.gradle/caches/transforms-1/files-1.1/com.android.support.appcompat-v7-27.1.1.aar/a7e2b09592c4013ed9576b2fbf03d7c8/res/values-km/values-km.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,308,420,507,611,729,806,883,966,1070,1175,1275,1385,1492,1600,1762,1860",
+                        "endColumns": "102,99,111,86,103,117,76,76,82,103,104,99,109,106,107,161,97,82",
+                        "endOffsets": "203,303,415,502,606,724,801,878,961,1065,1170,1270,1380,1487,1595,1757,1855,1938"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,308,420,507,611,729,806,883,966,1070,1175,1275,1385,1492,1600,1762,2068",
+                        "endColumns": "102,99,111,86,103,117,76,76,82,103,104,99,109,106,107,161,97,82",
+                        "endOffsets": "203,303,415,502,606,724,801,878,961,1065,1170,1270,1380,1487,1595,1757,1855,2146"
+                    }
+                },
+                {
+                    "source": "/Users/melihcol/.gradle/caches/transforms-1/files-1.1/com.android.support.support-compat-27.1.1.aar/353eb7d4d96f012cacc76e03110e5567/res/values-km/values-km.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "21",
+                        "startColumns": "4",
+                        "startOffsets": "2151",
+                        "endColumns": "100",
+                        "endOffsets": "2247"
+                    }
+                }
+            ]
+        }
+    ]
+}
