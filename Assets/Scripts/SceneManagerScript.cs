@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using GameAnalyticsSDK;
+//using GameAnalyticsSDK;
 public class SceneManagerScript : MonoBehaviour
 {
     public GameObject levelFinished;
@@ -17,19 +17,19 @@ public class SceneManagerScript : MonoBehaviour
 
     private void Awake()
     {
-        GameAnalytics.Initialize();
+       // GameAnalytics.Initialize();
     }
 
     void Start()
     {
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, SceneManager.GetActiveScene().buildIndex);
+     //   GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, SceneManager.GetActiveScene().buildIndex);
         GameManagerScript.isLevelFinished = false;
         sceneCount = SceneManager.sceneCountInBuildSettings;
         totalTreeCount = FindObjectsOfType<BaseObstacle>().Length;
     }
     private void loadNextScene()
     {
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, Application.version, SceneManager.GetActiveScene().buildIndex);
+     //   GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, Application.version, SceneManager.GetActiveScene().buildIndex);
         if (SceneManager.GetActiveScene().buildIndex != sceneCount - 1)
         {
             loadProcess();

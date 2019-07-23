@@ -9,7 +9,6 @@ public class GameManagerScript : MonoBehaviour
     private AnimationControllerScript animControllerNonStatic;
     [SerializeField]
     private ThrowController throwController;
-    private RectTransform panelTransform;
     [SerializeField]
     private int tearDropSineMultiplierNonStatic;
     [SerializeField]
@@ -37,20 +36,11 @@ public class GameManagerScript : MonoBehaviour
 
     //Variables for scene manager for static access
     public static SceneManagerScript sceneManagerScript;
-    private static RectTransform levelFinishedPanel;
-
-    private bool isScreenScaled = false;
     void Start()
     {
-        if (!isScreenScaled)
-        {
-            Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.FullScreenWindow, 0);
-            isScreenScaled = true;
-        }
         weaponTrailRenderer = trailRenderer;
         weaponScript = weaponScriptNonStatic;
         Application.targetFrameRate = 60;
-        levelFinishedPanel = panelTransform;
         sceneManagerScript = sceneManager;
         throwControllerScript = throwController;
         cameraMovementScript = cameraController;

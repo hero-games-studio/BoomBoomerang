@@ -55,26 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameAnalytics\Editor\GA_AssetPostprocessor.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_AutoRun.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_ContinuationManager.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_EditorUtilities.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_Menu.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_PostprocessBuild.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_SettingsInspector.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_SignUp.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GA_UpdateWindow.cs" />
-     <Compile Include="Assets\GameAnalytics\Editor\GameAnalyticsInspector.cs" />
-     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\PlayMakerPresenceCheck.cs" />
-     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\SendProgressionEventActionEditor.cs" />
-     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\SendResourceEventActionEditor.cs" />
-     <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\Editor\SetGenderActionEditor.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_InspectorHelpEditor.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_SpawnSystemEditor.cs" />
-     <None Include="Assets\PlayServicesResolver\Editor\ProjectDependencies.xml" />
-     <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.95.0.txt" />
-     <None Include="Assets\GameAnalytics\Editor\GameAnalyticsDependencies.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -330,38 +313,11 @@
  <Reference Include="DOTweenEditor">
  <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
- <Reference Include="Facebook.Unity">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity.Editor">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/FacebookSDK/Plugins/Editor/Facebook.Unity.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity.Gameroom">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll</HintPath>
- </Reference>
- <Reference Include="FacebookNamedPipeClient">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll</HintPath>
- </Reference>
- <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
- </Reference>
  <Reference Include="JMOAssets">
  <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
  </Reference>
  <Reference Include="JMOAssets_CartoonFXFreeWelcome">
  <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll</HintPath>
- </Reference>
- <Reference Include="Google.IOSResolver_v1.2.95.0">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.95.0.dll</HintPath>
- </Reference>
- <Reference Include="Google.JarResolver_v1.2.95.0">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.95.0.dll</HintPath>
- </Reference>
- <Reference Include="Google.VersionHandler">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
- </Reference>
- <Reference Include="Google.VersionHandlerImpl_v1.2.95.0">
- <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.95.0.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
