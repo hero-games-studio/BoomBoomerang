@@ -3,33 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BalloonScript : BaseObstacle
 {
-    private MeshRenderer mr;
+    [SerializeField]
+    private GameObject basePlane;
+
     [SerializeField]
     private ParticleSystem particleEffect;
+    [SerializeField]
+    private ParticleSystem explosionEffect;
     private bool isHit = false;
 
     void Start()
     {
-        mr = gameObject.GetComponent<MeshRenderer>();
-        Debug.Log(transform.childCount);
-        float r = Random.Range(0.3f, 1f);
-        float g = Random.Range(0.3f, 1f);
-        float b = Random.Range(0.3f, 1f);
-        mr.material.SetVector("_color", new Vector4(r, g, b, 1f));
         this.enabled = false;
     }
     void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Weapon")
         {
+            basePlane.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             if (particleEffect != null)
+            {
                 particleEffect.Play();
+            }
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
             GameManagerScript.obstacleDestroyed();
-            gameObject.AddComponent<selfDestroy>();
+            Invoke("playDestructionParticle",1.4f);
+            Invoke("destroySelf", 2f);
+
             isHit = true;
             this.enabled = true;
         }
+    }
+
+    private void playDestructionParticle(){
+        
+        explosionEffect.Play();
+    }
+    private void destroySelf()
+    {
+        Destroy(gameObject);
     }
 
     void FixedUpdate()

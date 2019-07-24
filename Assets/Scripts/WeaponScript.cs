@@ -4,8 +4,8 @@ using UnityEngine;
 public class WeaponScript : MonoBehaviour
 {
     public float rotationSpeed;
-    private float passedTimeTillThrow = 0f;
-    public float timeMultiplier = 400;
+    private float passedTimeTillThrow = 360f;
+    public float timeMultiplier = 650;
     private Quaternion throwStartRot;
     public GameObject playerObject;
 
@@ -45,8 +45,7 @@ public class WeaponScript : MonoBehaviour
     private Vector3 startRot;
     public void moveWeapon()
     {
-        passedTimeTillThrow = 0f;
-        timeMultiplier = originalTimeMultiplier * (1f + (2.5f - GameManagerScript.axisMultiplier));
+        passedTimeTillThrow = 360f;
         startPos = gameObject.transform.position;
         startRot = gameObject.transform.rotation.eulerAngles;
         StartCoroutine(incrementWeaponPos());
@@ -72,14 +71,14 @@ public class WeaponScript : MonoBehaviour
         while (true)
         {
 
-            if (passedTimeTillThrow >= 300 && !isTriggered)
+            if (passedTimeTillThrow <= 60 && !isTriggered)
             {
                 GameManagerScript.triggerIdle();
                 isTriggered = true;
             }
-            if (passedTimeTillThrow >= 360)
+            if (passedTimeTillThrow <= 0)
             {
-                passedTimeTillThrow = 0f;
+                passedTimeTillThrow = 360f;
                 disableSpinning();
                 GameManagerScript.catchWeapon();
                 GameManagerScript.setShowTrajectory(false);
@@ -88,7 +87,7 @@ public class WeaponScript : MonoBehaviour
             }
             else
             {
-                passedTimeTillThrow += 0.005f * timeMultiplier;
+                passedTimeTillThrow -= 0.005f * timeMultiplier;
                 gameObject.transform.position = getPos(passedTimeTillThrow);
                 yield return new WaitForSecondsRealtime(0.005f);
             }

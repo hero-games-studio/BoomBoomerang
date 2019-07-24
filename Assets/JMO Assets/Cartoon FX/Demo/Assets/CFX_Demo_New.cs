@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -10,22 +9,14 @@ using System.Text.RegularExpressions;
 
 public class CFX_Demo_New : MonoBehaviour
 {
+	public GUIText EffectLabel;
+	public GUIText EffectIndexLabel;
+	
 	public Renderer groundRenderer;
 	public Collider groundCollider;
-	[Space]
-	[Space]
-	public Image slowMoBtn;
-	public Text slowMoLabel;
-	public Image camRotBtn;
-	public Text camRotLabel;
-	public Image groundBtn;
-	public Text groundLabel;
-	[Space]
-	public Text EffectLabel;
-	public Text EffectIndexLabel;
-
+	
 	//-------------------------------------------------------------
-
+	
 	private GameObject[] ParticleExamples;
 	private int exampleIndex;
 	private bool slowMo;
@@ -93,54 +84,33 @@ public class CFX_Demo_New : MonoBehaviour
 			Camera.main.transform.rotation = defaultCamRotation;
 		}
 	}
-
+	
 	//-------------------------------------------------------------
 	// MESSAGES
-
-	public void OnToggleGround()
+	
+	void OnToggleGround()
 	{
-		var c = Color.white;
 		groundRenderer.enabled = !groundRenderer.enabled;
-		c.a = groundRenderer.enabled ? 1f : 0.33f;
-		groundBtn.color = c;
-		groundLabel.color = c;
-	}
-
-	public void OnToggleCamera()
-	{
-		var c = Color.white;
-		CFX_Demo_RotateCamera.rotating = !CFX_Demo_RotateCamera.rotating;
-		c.a = CFX_Demo_RotateCamera.rotating ? 1f : 0.33f;
-		camRotBtn.color = c;
-		camRotLabel.color = c;
 	}
 	
-	public void OnToggleSlowMo()
+	void OnToggleCamera()
 	{
-		var c = Color.white;
-
-		slowMo = !slowMo;
-		if(slowMo)
-		{
-			Time.timeScale = 0.33f;
-			c.a = 1f;
-		}
-		else
-		{
-			Time.timeScale = 1.0f;
-			c.a = 0.33f;
-		}
-
-		slowMoBtn.color = c;
-		slowMoLabel.color = c;
+		CFX_Demo_RotateCamera.rotating = !CFX_Demo_RotateCamera.rotating;
 	}
-
-	public void OnPreviousEffect()
+	
+	void OnToggleSlowMo()
+	{
+		slowMo = !slowMo;
+		if(slowMo)	Time.timeScale = 0.33f;
+		else  		Time.timeScale = 1.0f;
+	}
+	
+	void OnPreviousEffect()
 	{
 		prevParticle();
 	}
-
-	public void OnNextEffect()
+	
+	void OnNextEffect()
 	{
 		nextParticle();
 	}
@@ -170,25 +140,12 @@ public class CFX_Demo_New : MonoBehaviour
 		#endif
 		
 		ParticleSystem ps = particles.GetComponent<ParticleSystem>();
-
-#if UNITY_5_5_OR_NEWER
-		if (ps != null)
-		{
-			var main = ps.main;
-			if (main.loop)
-			{
-				ps.gameObject.AddComponent<CFX_AutoStopLoopedEffect>();
-				ps.gameObject.AddComponent<CFX_AutoDestructShuriken>();
-			}
-		}
-#else
 		if(ps != null && ps.loop)
 		{
 			ps.gameObject.AddComponent<CFX_AutoStopLoopedEffect>();
 			ps.gameObject.AddComponent<CFX_AutoDestructShuriken>();
 		}
-#endif
-
+		
 		onScreenParticles.Add(particles);
 		
 		return particles;

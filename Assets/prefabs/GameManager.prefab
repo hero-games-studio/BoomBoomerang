@@ -50,6 +50,11 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  PressIndicator: {fileID: 0}
+  pullingDivider: 7.5
+  minimumAxisMultiplier: 0.25
+  maximumAxisMultiplier: 2.5
+  wasTouched: 0
 --- !u!114 &3974134095367224617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,8 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneManager: {fileID: 4366986403706692109}
+  animControllerNonStatic: {fileID: 0}
   throwController: {fileID: 0}
-  tearDropSineMultiplierNonStatic: 3
+  tearDropSineMultiplierNonStatic: 1
   trajectoryNonStatic: {fileID: 0}
   weaponScriptNonStatic: {fileID: 0}
   trailRenderer: {fileID: 0}
@@ -80,5 +86,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749be75c824e3f54baaa8b8a288c4afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelTransform: {fileID: 0}
-  cuttedTreeCount: 0
+  text1: {fileID: 0}
+  text2: {fileID: 0}
+  slider: {fileID: 0}
+  levelFinished: {fileID: 0}
+  confettiSpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  confetti: {fileID: 1260827090746946, guid: 02e4f5e5ac181c748b4428d5a1004b3b, type: 3}
+  confettiScale: 4.5

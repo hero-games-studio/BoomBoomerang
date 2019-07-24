@@ -2,8 +2,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using GameAnalyticsSDK;
+using UnityEngine.UI;
+using TMPro;
 public class SceneManagerScript : MonoBehaviour
 {
+    [SerializeField]
+    private TMP_Text text1;
+    [SerializeField]
+    private TMP_Text text2;
+    [SerializeField]
+    private Slider slider;
+
     public GameObject levelFinished;
     public GameObject[] confettiSpawnPoints;
 
@@ -18,14 +27,27 @@ public class SceneManagerScript : MonoBehaviour
     private void Awake()
     {
         GameAnalytics.Initialize();
+        totalTreeCount = FindObjectsOfType<BaseObstacle>().Length;
     }
 
     void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex != sceneCount - 1)
+        {
+            text1.text = SceneManager.GetActiveScene().buildIndex.ToString();
+            text2.text = (SceneManager.GetActiveScene().buildIndex + 1).ToString();
+        }
+        else
+        {
+            text1.text = SceneManager.GetActiveScene().buildIndex.ToString();
+            text2.text = "0";
+
+        }
+        SaveSystem.save(SceneManager.GetActiveScene().buildIndex);
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, SceneManager.GetActiveScene().buildIndex);
         GameManagerScript.isLevelFinished = false;
         sceneCount = SceneManager.sceneCountInBuildSettings;
-        totalTreeCount = FindObjectsOfType<BaseObstacle>().Length;
+        slider.value = cuttedTreeCount / totalTreeCount;
     }
     private void loadNextScene()
     {
@@ -55,7 +77,7 @@ public class SceneManagerScript : MonoBehaviour
 
     private void InvokableReload()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void checkSceneLoadCondition()
@@ -69,10 +91,16 @@ public class SceneManagerScript : MonoBehaviour
     public void addTreeCut()
     {
         cuttedTreeCount++;
+        slider.value = (float)cuttedTreeCount / (float)totalTreeCount;
     }
 
     private void invokableLoad()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    private void saveLevelBuildIndex()
+    {
+
     }
 }
