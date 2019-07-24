@@ -40,6 +40,8 @@ public class SceneManagerScript : MonoBehaviour
         }
         else
         {
+            //asdfasdf
+            
             text1.text = SceneManager.GetActiveScene().buildIndex.ToString();
             text2.text = "0";
 

@@ -4,7 +4,6 @@ public class DominoScript : BaseObstacle
 {
     private Rigidbody[] rigidbodies;
     private MeshRenderer[] meshRenderers;
-
     private BoxCollider boxCollider;
     void Awake()
     {

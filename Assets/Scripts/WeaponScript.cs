@@ -74,7 +74,10 @@ public class WeaponScript : MonoBehaviour
         {
             if (isCrashed)
             {
+                disableSpinning();
+                isMoving=false;
                 isCrashed = false;
+                
                 yield break;
             }
             if (passedTimeTillThrow <= 60 && !isTriggered)

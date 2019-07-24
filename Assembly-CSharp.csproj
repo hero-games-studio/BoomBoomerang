@@ -127,12 +127,12 @@
      <Compile Include="Assets\Scripts\CameraMovementScript.cs" />
      <Compile Include="Assets\Scripts\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\GameManagerScript.cs" />
-     <Compile Include="Assets\Scripts\Impenetrable.cs" />
      <Compile Include="Assets\Scripts\LoadingScript.cs" />
      <Compile Include="Assets\Scripts\Obstacles\BalloonScript.cs" />
      <Compile Include="Assets\Scripts\Obstacles\BaseObstacle.cs" />
      <Compile Include="Assets\Scripts\Obstacles\DominoScript.cs" />
      <Compile Include="Assets\Scripts\Obstacles\TreeCutScript.cs" />
+     <Compile Include="Assets\Scripts\RockScript.cs" />
      <Compile Include="Assets\Scripts\SaveSystem.cs" />
      <Compile Include="Assets\Scripts\SceneManagerScript.cs" />
      <Compile Include="Assets\Scripts\ThrowController.cs" />
