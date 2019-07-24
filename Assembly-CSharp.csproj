@@ -123,13 +123,14 @@
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
-     <Compile Include="Assets\LoadingScript.cs" />
      <Compile Include="Assets\Scripts\AnimationControllerScript.cs" />
      <Compile Include="Assets\Scripts\CameraMovementScript.cs" />
      <Compile Include="Assets\Scripts\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\GameManagerScript.cs" />
+     <Compile Include="Assets\Scripts\LoadingScript.cs" />
      <Compile Include="Assets\Scripts\Obstacles\BalloonScript.cs" />
      <Compile Include="Assets\Scripts\Obstacles\BaseObstacle.cs" />
+     <Compile Include="Assets\Scripts\Obstacles\DominoScript.cs" />
      <Compile Include="Assets\Scripts\Obstacles\TreeCutScript.cs" />
      <Compile Include="Assets\Scripts\SaveSystem.cs" />
      <Compile Include="Assets\Scripts\SceneManagerScript.cs" />
@@ -214,6 +215,12 @@
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProGrids">
+ <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProGrids.Editor">
+ <HintPath>C:/BoomBoomerang-test/dev/New Unity Project/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
