@@ -94,4 +94,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   confetti: {fileID: 1260827090746946, guid: 02e4f5e5ac181c748b4428d5a1004b3b, type: 3}
-  confettiScale: 4.5
+  confettiScale: 6

@@ -28,6 +28,7 @@ public class SceneManagerScript : MonoBehaviour
     {
         GameAnalytics.Initialize();
         totalTreeCount = FindObjectsOfType<BaseObstacle>().Length;
+        Debug.Log(totalTreeCount);
     }
 
     void Start()
@@ -47,6 +48,9 @@ public class SceneManagerScript : MonoBehaviour
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, SceneManager.GetActiveScene().buildIndex);
         GameManagerScript.isLevelFinished = false;
         sceneCount = SceneManager.sceneCountInBuildSettings;
+        if(totalTreeCount==0){
+            totalTreeCount=FindObjectsOfType<BaseObstacle>().Length;
+        }
         slider.value = cuttedTreeCount / totalTreeCount;
     }
     private void loadNextScene()

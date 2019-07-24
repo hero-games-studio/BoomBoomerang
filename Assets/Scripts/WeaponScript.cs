@@ -62,6 +62,8 @@ public class WeaponScript : MonoBehaviour
         }
     }
 
+    public static bool isCrashed = false;
+
     IEnumerator incrementWeaponPos()
     {
         isMoving = true;
@@ -70,7 +72,11 @@ public class WeaponScript : MonoBehaviour
         bool isTriggered = false;
         while (true)
         {
-
+            if (isCrashed)
+            {
+                isCrashed = false;
+                yield break;
+            }
             if (passedTimeTillThrow <= 60 && !isTriggered)
             {
                 GameManagerScript.triggerIdle();
