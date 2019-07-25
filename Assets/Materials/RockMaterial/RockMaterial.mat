@@ -21,11 +21,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RockMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 2c42b972dd7660f4f85fd363ffeaf8f7,
+  m_Shader: {fileID: -6465566751694194690, guid: 8725eadf6124f4c429721b2092b744e4,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -62,6 +62,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_1EA004C5: 0.25
+    - Vector1_7B354C71: 7
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -84,8 +86,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_2F82B077: {r: 0.2830189, g: 0.06558699, b: 0.033374865, a: 0}
+    - Color_2F82B077: {r: 1, g: 0.5613208, b: 0.9817216, a: 0}
+    - Color_72368AF1: {r: 0, g: 0, b: 0, a: 0}
+    - Color_ACB34AA: {r: 0.104129605, g: 0.5660378, b: 0.5149848, a: 0}
     - Color_BA10D042: {r: 0.3018868, g: 0.014206439, b: 0, a: 0}
+    - Color_ECBC78C4: {r: 0.13679248, g: 1, b: 0.32123488, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

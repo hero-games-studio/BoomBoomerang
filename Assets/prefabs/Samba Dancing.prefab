@@ -283,9 +283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponScript: {fileID: 4568367197543672139}
-  weapon: {fileID: 9139530886044747665}
-  hand: {fileID: 6384055486591371903}
   trailRenderer: {fileID: 8354994417728757218}
+  hand: {fileID: 6384055486591371903}
 --- !u!1 &2778397354588678479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1323,11 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 2265617345931341012}
+    - target: {fileID: 6538035387797362288, guid: f15237af65c2fb74a9b0bfbe97b893b5,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3345857962626662941, guid: f15237af65c2fb74a9b0bfbe97b893b5,
         type: 3}
       propertyPath: m_LocalPosition.x

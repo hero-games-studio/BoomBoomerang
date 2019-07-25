@@ -15,14 +15,20 @@ public class DominoScript : BaseObstacle
     {
         if (collision.tag == "Weapon")
         {
-            boxCollider.enabled = false;
-
-            for (int i = 0; i < rigidbodies.Length; i++)
-            {
-                rigidbodies[i].useGravity = true;
-                meshRenderers[i].material.SetVector("_color", new Vector4(0.8f, 0.8f, 0.8f, 1f));
-            }
-            GameManagerScript.obstacleDestroyed();
+            performAction();
         }
+    }
+
+    public override void performAction()
+    {
+
+        boxCollider.enabled = false;
+
+        for (int i = 0; i < rigidbodies.Length; i++)
+        {
+            rigidbodies[i].useGravity = true;
+            meshRenderers[i].material.SetVector("_color", new Vector4(0.8f, 0.8f, 0.8f, 1f));
+        }
+        GameManagerScript.obstacleDestroyed();
     }
 }

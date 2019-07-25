@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseObstacle : MonoBehaviour
+public abstract class BaseObstacle : MonoBehaviour
 {
+    public abstract void performAction();
 }

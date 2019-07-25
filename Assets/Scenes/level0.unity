@@ -1916,6 +1916,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPonit2
       objectReference: {fileID: 0}
+    - target: {fileID: 2961962276822262049, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8912274928112119638, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
       propertyPath: m_AnchoredPosition.x

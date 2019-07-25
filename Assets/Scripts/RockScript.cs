@@ -1,21 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 public class RockScript : MonoBehaviour
 {
+
+    void Awake()
+    {
+        Invoke("InvokeEnableThis", 0.2f);
+    }
+
+    private void InvokeEnableThis()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Weapon")
         {
             Rigidbody weaponBody = collision.gameObject.GetComponent<Rigidbody>();
             WeaponScript.isCrashed = true;
-            Invoke("returnToHand", 1f);
+            SceneManagerScript.incrementThrowCounter();
         }
-    }
-
-    private void returnToHand(Collision collision)
-    {
-        SceneManagerScript.incrementThrowCounter();
     }
 }

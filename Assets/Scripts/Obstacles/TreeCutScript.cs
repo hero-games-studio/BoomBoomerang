@@ -16,21 +16,26 @@ public class TreeCutScript : BaseObstacle
     {
         if (other.transform.tag == "Weapon")
         {
-            instanced = Instantiate(breakable, transform.position, Quaternion.identity);
-            Rigidbody[] rbs = instanced.GetComponentsInChildren<Rigidbody>();
-            Vector3 spawnPoint = cam.transform.position - gameObject.transform.position;
-            spawnPoint = spawnPoint / 10 + transform.position;
-            Instantiate(destructionParticle, spawnPoint, Quaternion.identity);
-            foreach (Rigidbody rb in rbs)
-            {
-                rb.AddExplosionForce(60, transform.position, 30);
-            }
-            if (!isDestroyed)
-            {
-                GameManagerScript.obstacleDestroyed();
-                Destroy(gameObject);
-                isDestroyed = true;
-            }
+            performAction();
+        }
+    }
+
+    public override void performAction()
+    {
+        instanced = Instantiate(breakable, transform.position, Quaternion.identity);
+        Rigidbody[] rbs = instanced.GetComponentsInChildren<Rigidbody>();
+        Vector3 spawnPoint = cam.transform.position - gameObject.transform.position;
+        spawnPoint = spawnPoint / 10 + transform.position;
+        Instantiate(destructionParticle, spawnPoint, Quaternion.identity);
+        foreach (Rigidbody rb in rbs)
+        {
+            rb.AddExplosionForce(60, transform.position, 30);
+        }
+        if (!isDestroyed)
+        {
+            GameManagerScript.obstacleDestroyed();
+            Destroy(gameObject);
+            isDestroyed = true;
         }
     }
 }

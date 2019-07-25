@@ -125,6 +125,7 @@
      <Compile Include="Assets\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
      <Compile Include="Assets\Scripts\AnimationControllerScript.cs" />
      <Compile Include="Assets\Scripts\CameraMovementScript.cs" />
+     <Compile Include="Assets\Scripts\ExplosiveBox.cs" />
      <Compile Include="Assets\Scripts\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\Scripts\LoadingScript.cs" />

@@ -7,17 +7,16 @@ public class WeaponScript : MonoBehaviour
     public float rotationSpeed;
     private float passedTimeTillThrow = 360f;
     public float timeMultiplier = 750;
-
     public float extraTimeMultiplier = 400;
     private Quaternion throwStartRot;
     public GameObject playerObject;
-
     private GameObject parent;
     private CapsuleCollider capsuleCollider;
-
     private IEnumerator spinningCoroutine;
-
     private float originalTimeMultiplier;
+    public static bool isCrashed = false;
+    private Vector3 startPos;
+    private Vector3 startRot;
 
     void Start()
     {
@@ -49,8 +48,6 @@ public class WeaponScript : MonoBehaviour
         }
     }
 
-    private Vector3 startPos;
-    private Vector3 startRot;
     public void moveWeapon()
     {
         passedTimeTillThrow = 360f;
@@ -79,7 +76,6 @@ public class WeaponScript : MonoBehaviour
         }
     }
 
-    public static bool isCrashed = false;
 
     IEnumerator incrementWeaponPos()
     {
@@ -92,7 +88,7 @@ public class WeaponScript : MonoBehaviour
             if (isCrashed)
             {
                 returnFromCrash();
-                timeMultiplier=originalTimeMultiplier;
+                timeMultiplier = originalTimeMultiplier;
                 isCrashed = false;
 
                 yield break;
@@ -105,7 +101,7 @@ public class WeaponScript : MonoBehaviour
             if (passedTimeTillThrow <= 0)
             {
                 passedTimeTillThrow = 360f;
-                timeMultiplier=originalTimeMultiplier;
+                timeMultiplier = originalTimeMultiplier;
                 disableSpinning();
                 GameManagerScript.catchWeapon();
                 GameManagerScript.setShowTrajectory(false);
@@ -130,16 +126,11 @@ public class WeaponScript : MonoBehaviour
 
     private void invokeCrashFinish()
     {
-        isMoving = false;
-        transform.parent = parent.transform;
-        disableSpinning();
-        capsuleCollider.enabled = true;
         GameManagerScript.triggerIdle();
         GameManagerScript.catchWeapon();
-        GameManagerScript.setShowTrajectory(false);
+        isMoving = false;
+        capsuleCollider.enabled = true;
     }
-
-    public Vector3 correctionVector;
     private Vector3 getPos(float time)
     {
         Vector3 result = calcPos(time);
@@ -148,7 +139,7 @@ public class WeaponScript : MonoBehaviour
         Quaternion rotatedVector = Quaternion.Euler(0, throwStartRot.eulerAngles.y + 90, 0);
         Vector3 direction = rotatedVector * result;
 
-        return direction + correctionVector;
+        return direction;
     }
     private Vector3 calcPos(float time)
     {
