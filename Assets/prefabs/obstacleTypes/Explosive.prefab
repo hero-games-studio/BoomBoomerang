@@ -93,8 +93,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.7293518
+  m_Center: {x: 0, y: 0.78999996, z: 0}
 --- !u!114 &705479418265080836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 8
   boomPlosion: {fileID: 3261447317767990317}
+  indicator: {fileID: 6062599361949737033}
 --- !u!1 &6062599361949737033
 GameObject:
   m_ObjectHideFlags: 0
