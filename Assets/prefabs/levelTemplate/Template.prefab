@@ -2623,7 +2623,7 @@ PrefabInstance:
     - target: {fileID: 3974134095367224619, guid: c4b4a35df472c0b48a6ef5860227eaa7,
         type: 3}
       propertyPath: pullingDivider
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3974134095367224619, guid: c4b4a35df472c0b48a6ef5860227eaa7,
         type: 3}
