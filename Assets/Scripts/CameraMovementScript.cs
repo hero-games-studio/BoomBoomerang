@@ -19,8 +19,8 @@ public class CameraMovementScript : MonoBehaviour
 
     private Vector3 initialForward;
     public float pullingDivider = 7.5f;
-    public float minimumAxisMultiplier = 0.25f;
-    public float maximumAxisMultiplier = 2.5f;
+    public static float minimumAxisMultiplier = 0.5f;
+    public static float maximumAxisMultiplier = 4.5f;
 
     void Start()
     {

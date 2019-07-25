@@ -23,6 +23,18 @@ public class SceneManagerScript : MonoBehaviour
     private int cuttedTreeCount = 0;
     public float confettiScale = 4.5f;
     private int sceneCount;
+    private static int tryCount = 1;
+    public static int boomerangThrowCounter
+    {
+        get
+        {
+            return tryCount;
+        }
+    }
+    public static void incrementThrowCounter()
+    {
+        tryCount++;
+    }
 
     private void Awake()
     {
@@ -41,7 +53,7 @@ public class SceneManagerScript : MonoBehaviour
         else
         {
             //asdfasdf
-            
+
             text1.text = SceneManager.GetActiveScene().buildIndex.ToString();
             text2.text = "0";
 
@@ -50,8 +62,9 @@ public class SceneManagerScript : MonoBehaviour
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, SceneManager.GetActiveScene().buildIndex);
         GameManagerScript.isLevelFinished = false;
         sceneCount = SceneManager.sceneCountInBuildSettings;
-        if(totalTreeCount==0){
-            totalTreeCount=FindObjectsOfType<BaseObstacle>().Length;
+        if (totalTreeCount == 0)
+        {
+            totalTreeCount = FindObjectsOfType<BaseObstacle>().Length;
         }
         slider.value = cuttedTreeCount / totalTreeCount;
     }

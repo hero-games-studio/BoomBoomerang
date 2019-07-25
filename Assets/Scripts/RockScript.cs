@@ -8,16 +8,14 @@ public class RockScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Weapon")
         {
-            Rigidbody weaponBody =collision.gameObject.GetComponent<Rigidbody>();
-            weaponBody.isKinematic=true;
-            weaponBody.useGravity=true;
+            Rigidbody weaponBody = collision.gameObject.GetComponent<Rigidbody>();
             WeaponScript.isCrashed = true;
-            Invoke("reloadLevel", 2f);
+            Invoke("returnToHand", 1f);
         }
     }
 
-    private void reloadLevel()
+    private void returnToHand(Collision collision)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManagerScript.incrementThrowCounter();
     }
 }

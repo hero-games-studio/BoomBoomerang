@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using UnityEngine;
+using DG.Tweening;
 
 public class WeaponScript : MonoBehaviour
 {
     public float rotationSpeed;
     private float passedTimeTillThrow = 360f;
-    public float timeMultiplier = 650;
+    public float timeMultiplier = 750;
+
+    public float extraTimeMultiplier = 400;
     private Quaternion throwStartRot;
     public GameObject playerObject;
+
+    private GameObject parent;
+    private CapsuleCollider capsuleCollider;
 
     private IEnumerator spinningCoroutine;
 
@@ -15,6 +21,8 @@ public class WeaponScript : MonoBehaviour
 
     void Start()
     {
+        capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
+        parent = transform.parent.gameObject;
         originalTimeMultiplier = timeMultiplier;
         spinningCoroutine = spinBoomerang();
     }
@@ -48,7 +56,16 @@ public class WeaponScript : MonoBehaviour
         passedTimeTillThrow = 360f;
         startPos = gameObject.transform.position;
         startRot = gameObject.transform.rotation.eulerAngles;
+        calculateTimeMultiplier();
         StartCoroutine(incrementWeaponPos());
+    }
+
+    private void calculateTimeMultiplier()
+    {
+        float maxVal = CameraMovementScript.maximumAxisMultiplier - CameraMovementScript.minimumAxisMultiplier;
+        float currentVal = 1 / GameManagerScript.axisMultiplier;
+        float extraSpeed = currentVal * extraTimeMultiplier;
+        timeMultiplier += extraSpeed;
     }
 
     private bool isMoving = false;
@@ -74,10 +91,10 @@ public class WeaponScript : MonoBehaviour
         {
             if (isCrashed)
             {
-                disableSpinning();
-                isMoving=false;
+                returnFromCrash();
+                timeMultiplier=originalTimeMultiplier;
                 isCrashed = false;
-                
+
                 yield break;
             }
             if (passedTimeTillThrow <= 60 && !isTriggered)
@@ -88,6 +105,7 @@ public class WeaponScript : MonoBehaviour
             if (passedTimeTillThrow <= 0)
             {
                 passedTimeTillThrow = 360f;
+                timeMultiplier=originalTimeMultiplier;
                 disableSpinning();
                 GameManagerScript.catchWeapon();
                 GameManagerScript.setShowTrajectory(false);
@@ -101,6 +119,24 @@ public class WeaponScript : MonoBehaviour
                 yield return new WaitForSecondsRealtime(0.005f);
             }
         }
+    }
+
+    public void returnFromCrash()
+    {
+        transform.DOMove(parent.transform.position, 1.5f);
+        capsuleCollider.enabled = false;
+        Invoke("invokeCrashFinish", 1.5f);
+    }
+
+    private void invokeCrashFinish()
+    {
+        isMoving = false;
+        transform.parent = parent.transform;
+        disableSpinning();
+        capsuleCollider.enabled = true;
+        GameManagerScript.triggerIdle();
+        GameManagerScript.catchWeapon();
+        GameManagerScript.setShowTrajectory(false);
     }
 
     public Vector3 correctionVector;
@@ -124,13 +160,5 @@ public class WeaponScript : MonoBehaviour
             zVal *= Mathf.Sin(time / 2);
         }
         return new Vector3(Mathf.Cos(time) * GameManagerScript.axisMultiplier, 0.15f, zVal * GameManagerScript.axisMultiplier / 2) * 10;
-    }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.GetComponent<TreeCutScript>() != null)
-        {
-
-        }
     }
 }
