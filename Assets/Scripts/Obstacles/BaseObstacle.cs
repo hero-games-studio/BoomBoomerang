@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class BaseObstacle : MonoBehaviour
 {
-    public abstract void performAction();
+    public abstract void performAction(string tag);
 }

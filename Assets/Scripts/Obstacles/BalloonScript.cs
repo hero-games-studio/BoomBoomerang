@@ -18,38 +18,38 @@ public class BalloonScript : BaseObstacle
     }
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.tag == "Weapon")
-        {
-            performAction();
-        }
+        performAction(collider.tag);
     }
 
-    public override void performAction()
+    public override void performAction(string tag)
     {
-        basePlane.GetComponent<MeshRenderer>().enabled = false;
-        gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
-        if (particleEffect != null)
+        if (tag == "Weapon"|| tag == "Bomb")
         {
-            particleEffect.Play();
-        }
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        GameManagerScript.obstacleDestroyed();
-        Invoke("playDestructionParticle", 1.4f);
-        Invoke("destroySelf", 2f);
+            basePlane.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            if (particleEffect != null)
+            {
+                particleEffect.Play();
+            }
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            GameManagerScript.obstacleDestroyed();
+            Invoke("playDestructionParticle", 1.4f);
+            Invoke("destroySelf", 2f);
 
-        isHit = true;
-        this.enabled = true;
+            isHit = true;
+            this.enabled = true;
+        }
     }
 
     private void playDestructionParticle()
     {
 
-        gameObject.GetComponent<MeshRenderer>().enabled=false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
         explosionEffect.Play();
     }
     private void destroySelf()
     {
-     //   Destroy(gameObject);
+        //   Destroy(gameObject);
     }
 
     void FixedUpdate()

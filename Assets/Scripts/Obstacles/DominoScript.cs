@@ -13,22 +13,37 @@ public class DominoScript : BaseObstacle
     }
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "Weapon")
-        {
-            performAction();
-        }
+        collisionPosition=collision.gameObject.transform.position;
+        performAction(collision.tag);
     }
 
-    public override void performAction()
+    private Vector3 collisionPosition;
+
+    public override void performAction(string tag)
     {
 
-        boxCollider.enabled = false;
-
-        for (int i = 0; i < rigidbodies.Length; i++)
+        if (tag == "Weapon")
         {
-            rigidbodies[i].useGravity = true;
-            meshRenderers[i].material.SetVector("_color", new Vector4(0.8f, 0.8f, 0.8f, 1f));
+            boxCollider.enabled = false;
+
+            for (int i = 0; i < rigidbodies.Length; i++)
+            {
+                rigidbodies[i].useGravity = true;
+                meshRenderers[i].material.SetVector("_color", new Vector4(0.8f, 0.8f, 0.8f, 1f));
+            }
+            GameManagerScript.obstacleDestroyed();
         }
-        GameManagerScript.obstacleDestroyed();
+        else if (tag == "Bomb")
+        {
+            boxCollider.enabled = false;
+
+            for (int i = 0; i < rigidbodies.Length; i++)
+            {
+                rigidbodies[i].useGravity = true;
+                rigidbodies[i].AddExplosionForce(500f,collisionPosition,1500f);
+                meshRenderers[i].material.SetVector("_color", new Vector4(0.8f, 0.8f, 0.8f, 1f));
+            }
+            GameManagerScript.obstacleDestroyed();
+        }
     }
 }

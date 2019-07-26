@@ -205,12 +205,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
         type: 3}
-      propertyPath: destructionParticle
-      value: 
-      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
-        type: 3}
-    - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
-        type: 3}
       propertyPath: extraParticle
       value: 
       objectReference: {fileID: 0}
@@ -314,22 +308,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
-        type: 3}
-      propertyPath: destructionParticle
-      value: 
-      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
-        type: 3}
-    - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
-        type: 3}
-      propertyPath: extraParticle
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 149151834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3643c6b64a444fe44a378e4a66e954e5, type: 3}
 --- !u!1001 &281809559
@@ -471,22 +449,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
-        type: 3}
-      propertyPath: destructionParticle
-      value: 
-      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
-        type: 3}
-    - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
-        type: 3}
-      propertyPath: extraParticle
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 149151834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3643c6b64a444fe44a378e4a66e954e5, type: 3}
 --- !u!21 &642298702
@@ -812,6 +774,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Template
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472117006932442644, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5472117006932442644, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7257632613217501536, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
@@ -1498,6 +1470,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7875655913529091868, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0010528564
+      objectReference: {fileID: 0}
     - target: {fileID: 7046080480391877000, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
       propertyPath: m_Name
@@ -1543,6 +1520,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2053112883294542742, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2400587693069904471, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
@@ -1576,21 +1558,6 @@ PrefabInstance:
     - target: {fileID: 2400587693069904471, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472117006932442644, guid: fb7f9fa9789ea564ab1d1350c2779f93,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5472117006932442644, guid: fb7f9fa9789ea564ab1d1350c2779f93,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2053112883294542742, guid: fb7f9fa9789ea564ab1d1350c2779f93,
-        type: 3}
-      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

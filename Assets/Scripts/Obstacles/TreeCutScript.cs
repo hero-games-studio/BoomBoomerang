@@ -3,39 +3,26 @@
 public class TreeCutScript : BaseObstacle
 {
     [SerializeField]
-    private GameObject destructionParticle;
-    [SerializeField]
-    public GameObject breakable;
-
-    private GameObject instanced;
-
-    public GameObject cam;
+    private ParticleSystem destructionParticle;
     private bool isDestroyed = false;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Weapon")
-        {
-            performAction();
-        }
+        performAction(other.tag);
     }
 
-    public override void performAction()
+    public override void performAction(string tag)
     {
-        instanced = Instantiate(breakable, transform.position, Quaternion.identity);
-        Rigidbody[] rbs = instanced.GetComponentsInChildren<Rigidbody>();
-        Vector3 spawnPoint = cam.transform.position - gameObject.transform.position;
-        spawnPoint = spawnPoint / 10 + transform.position;
-        Instantiate(destructionParticle, spawnPoint, Quaternion.identity);
-        foreach (Rigidbody rb in rbs)
+        if (tag == "Weapon" || tag == "Bomb")
         {
-            rb.AddExplosionForce(60, transform.position, 30);
-        }
-        if (!isDestroyed)
-        {
-            GameManagerScript.obstacleDestroyed();
-            Destroy(gameObject);
-            isDestroyed = true;
+            destructionParticle.Play();
+            destructionParticle.transform.parent = null;
+            if (!isDestroyed)
+            {
+                GameManagerScript.obstacleDestroyed();
+                Destroy(gameObject);
+                isDestroyed = true;
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ public class ExplosiveBox : BaseObstacle
 {
     public float radius = 5;
     public ParticleSystem boomPlosion;
+    public ParticleSystem boomFire;
     public GameObject indicator;
 
     private GameObject basePlane;
@@ -19,16 +20,17 @@ public class ExplosiveBox : BaseObstacle
     {
         if (collision.gameObject.tag == "Weapon" || collision.gameObject.tag == "Bomb")
         {
-            performAction();
+            performAction(collision.tag);
         }
     }
     private Collider[] collided;
     private bool isExploded = false;
-    public override void performAction()
+    public override void performAction(string tag)
     {
         if (!isExploded)
         {
-            Invoke("InvokeDestroy", 2f);
+            boomFire.Play();
+            Invoke("InvokeDestroy", 1.5f);
             isExploded = true;
             this.enabled = false;
             collided = Physics.OverlapSphere(gameObject.transform.position, radius);
@@ -41,15 +43,20 @@ public class ExplosiveBox : BaseObstacle
         GameManagerScript.obstacleDestroyed();
         basePlane.GetComponent<MeshRenderer>().enabled = false;
         boomPlosion.Play();
+        boomPlosion.transform.parent = null;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         foreach (Collider collider in collided)
         {
-            BaseObstacle temp = collider.gameObject.GetComponent<BaseObstacle>();
-            if (temp != null)
+            if (collider != null)
             {
-                temp.performAction();
+                BaseObstacle temp = collider.gameObject.GetComponent<BaseObstacle>();
+                if (temp != null)
+                {
+                    temp.performAction(this.tag);
+                }
             }
         }
+        Destroy(gameObject);
     }
 }
 

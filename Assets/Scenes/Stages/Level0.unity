@@ -419,8 +419,7 @@ PrefabInstance:
         type: 3}
       propertyPath: destructionParticle
       value: 
-      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56,
-        type: 3}
+      objectReference: {fileID: 440918728}
     - target: {fileID: -3919149391087175760, guid: 3643c6b64a444fe44a378e4a66e954e5,
         type: 3}
       propertyPath: extraParticle
@@ -436,7 +435,13 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1056689810903916821, guid: 3643c6b64a444fe44a378e4a66e954e5,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1008190748164153193, guid: 3643c6b64a444fe44a378e4a66e954e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3643c6b64a444fe44a378e4a66e954e5, type: 3}
 --- !u!1 &149151834 stripped
 GameObject:
@@ -501,6 +506,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d27d37bab3c447b8eb7a2a6756e952, type: 3}
+--- !u!198 &440918728 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1056928287335887197, guid: 3643c6b64a444fe44a378e4a66e954e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 129870537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &518771570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,16 +1255,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Template
       objectReference: {fileID: 0}
-    - target: {fileID: 7752240576142100319, guid: fb7f9fa9789ea564ab1d1350c2779f93,
-        type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 7257632613217501536, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 278a0e8933d4496448e60f5b3859912c, type: 2}
+    - target: {fileID: 7752240576142100319, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 4544572159891214237, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1929,6 +1940,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7875655913529091868, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0010528564
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046080480391877000, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896635954576257321, guid: fb7f9fa9789ea564ab1d1350c2779f93,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnPonit2
+      objectReference: {fileID: 0}
     - target: {fileID: 8912274928112119638, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1943,16 +1969,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 7046080480391877000, guid: fb7f9fa9789ea564ab1d1350c2779f93,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnPoint1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2896635954576257321, guid: fb7f9fa9789ea564ab1d1350c2779f93,
-        type: 3}
-      propertyPath: m_Name
-      value: SpawnPonit2
       objectReference: {fileID: 0}
     - target: {fileID: 2609755797777935469, guid: fb7f9fa9789ea564ab1d1350c2779f93,
         type: 3}
