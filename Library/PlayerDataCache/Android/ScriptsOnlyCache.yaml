@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AnimationControllerScript
     - BalloonScript
-    - CFX_AutoDestructShuriken
     - CFX_InspectorHelp
     - CameraMovementScript
     - DominoScript
@@ -40,8 +39,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.RawImage
-    - UnityEngine.UI.Slider
   sceneClasses:
     Assets/Scenes/AllStages/Level1.unity:
     - Class: 1
@@ -98,10 +95,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -199,10 +192,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -303,10 +292,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -406,10 +391,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -502,10 +483,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -606,10 +583,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -705,10 +678,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -803,10 +772,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -907,10 +872,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -1005,10 +966,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -1110,10 +1067,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -1218,10 +1171,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -1314,10 +1263,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -1422,10 +1367,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -1528,10 +1469,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -1638,10 +1575,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -1738,10 +1671,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -1841,10 +1770,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -1949,10 +1874,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10542}
@@ -2055,10 +1976,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -2165,10 +2082,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10542}
@@ -2273,10 +2186,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -2385,10 +2294,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -2481,10 +2386,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -2593,10 +2494,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -2691,10 +2588,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -2791,10 +2684,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -2889,10 +2778,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -2989,10 +2874,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
-    - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
       Script: {instanceID: 10558}
@@ -3085,10 +2966,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9972}
     - Class: 114
       Script: {instanceID: 9980}
-    - Class: 114
-      Script: {instanceID: 10002}
-    - Class: 114
-      Script: {instanceID: 10014}
     - Class: 114
       Script: {instanceID: 10016}
     - Class: 114
@@ -4235,7 +4112,7 @@ ScriptsOnlyBuild:
     className: DominoScript
   - hash:
       serializedVersion: 2
-      Hash: 3eee2800767ccccdfd80d9ed4f6ad584
+      Hash: 26beda56244cf41119080ed7c5424636
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneManagerScript
@@ -4386,4 +4263,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/AllStages/Level28.unity
   - Assets/Scenes/AllStages/Level29.unity
   - Assets/Scenes/AllStages/Level30.unity
-  playerPath: /Users/melihcol/Documents/Builds/BoomBoomerang_Android26072019.apk
+  playerPath: /Users/melihcol/Documents/Builds/BoomBoomerang_Android26072019_Release.aab
