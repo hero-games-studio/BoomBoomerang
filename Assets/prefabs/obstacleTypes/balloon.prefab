@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 9142556518734718140}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -16.815813, y: 6.97, z: -11.488002}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 120, y: 120, z: 120}
   m_Children:
   - {fileID: 8787791195219833665}
   - {fileID: 5560589128709046546}
@@ -443,6 +443,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 19900004, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
       value: 500
@@ -555,57 +559,9 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.38074043
       objectReference: {fileID: 0}
-    - target: {fileID: 19900004, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: lengthInSec
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.9433962
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.4494482
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.4494482
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
-      propertyPath: playOnAwake
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -668,6 +624,50 @@ PrefabInstance:
       value: 0.4494482
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: lengthInSec
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.4494482
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.4494482
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: fb7b0526ade434043b350a180d741cf3, type: 3}
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}

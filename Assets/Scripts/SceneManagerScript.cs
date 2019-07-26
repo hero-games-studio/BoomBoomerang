@@ -19,8 +19,8 @@ public class SceneManagerScript : MonoBehaviour
     [SerializeField]
     private GameObject confetti;
 
-    private int totalTreeCount;
-    private int cuttedTreeCount = 0;
+    private int totalObstacleCountInScene;
+    private int destroyedObstacleCount = 0;
     public float confettiScale = 4.5f;
     private int sceneCount;
     private static int tryCount = 1;
@@ -39,8 +39,8 @@ public class SceneManagerScript : MonoBehaviour
     private void Awake()
     {
         GameAnalytics.Initialize();
-        totalTreeCount = FindObjectsOfType<BaseObstacle>().Length;
-        Debug.Log(totalTreeCount);
+        totalObstacleCountInScene = FindObjectsOfType<BaseObstacle>().Length;
+        Debug.Log(totalObstacleCountInScene);
     }
 
     void Start()
@@ -52,21 +52,18 @@ public class SceneManagerScript : MonoBehaviour
         }
         else
         {
-            //asdfasdf
-
             text1.text = SceneManager.GetActiveScene().buildIndex.ToString();
             text2.text = "0";
-
         }
         SaveSystem.save(SceneManager.GetActiveScene().buildIndex);
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, SceneManager.GetActiveScene().buildIndex);
         GameManagerScript.isLevelFinished = false;
         sceneCount = SceneManager.sceneCountInBuildSettings;
-        if (totalTreeCount == 0)
+        if (totalObstacleCountInScene == 0)
         {
-            totalTreeCount = FindObjectsOfType<BaseObstacle>().Length;
+            totalObstacleCountInScene = FindObjectsOfType<BaseObstacle>().Length;
         }
-        slider.value = cuttedTreeCount / totalTreeCount;
+        slider.value = destroyedObstacleCount / totalObstacleCountInScene;
     }
     private void loadNextScene()
     {
@@ -101,25 +98,20 @@ public class SceneManagerScript : MonoBehaviour
 
     public void checkSceneLoadCondition()
     {
-        if (cuttedTreeCount == totalTreeCount)
+        if (destroyedObstacleCount == totalObstacleCountInScene)
         {
             loadNextScene();
         }
     }
 
-    public void addTreeCut()
+    public void incrementDestroyedObstacle()
     {
-        cuttedTreeCount++;
-        slider.value = (float)cuttedTreeCount / (float)totalTreeCount;
+        destroyedObstacleCount++;
+        slider.value = (float)destroyedObstacleCount / (float)totalObstacleCountInScene;
     }
 
     private void invokableLoad()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    private void saveLevelBuildIndex()
-    {
-
     }
 }

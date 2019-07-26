@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
+    #region non-static
     //Non static variables
     [SerializeField]
-    private SceneManagerScript sceneManager;
-    private CameraMovementScript cameraController;
+    private SceneManagerScript sceneManagerNonStatic;
+    private CameraMovementScript cameraMovementScriptNonStatic;
     [SerializeField]
     private AnimationControllerScript animControllerNonStatic;
     [SerializeField]
-    private ThrowController throwController;
-    private RectTransform panelTransform;
+    private ThrowController throwControllerNonStatic;
     [SerializeField]
     private int tearDropSineMultiplierNonStatic;
     [SerializeField]
@@ -18,8 +18,9 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField]
     private WeaponScript weaponScriptNonStatic;
     [SerializeField]
-    private TrailRenderer trailRenderer;
-
+    private TrailRenderer weaponTrailRendererNonStatic;
+    #endregion
+    #region static 
     //Camera controller script as static
     public static CameraMovementScript cameraMovementScript;
 
@@ -33,27 +34,18 @@ public class GameManagerScript : MonoBehaviour
     public static WeaponScript weaponScript;
     public static TrailRenderer weaponTrailRenderer;
     public static AnimationControllerScript animController;
-
-
     //Variables for scene manager for static access
     public static SceneManagerScript sceneManagerScript;
-    private static RectTransform levelFinishedPanel;
-
-    private bool isScreenScaled = false;
+    #endregion
     void Start()
     {
-        if (!isScreenScaled)
-        {
-            Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.FullScreenWindow, 0);
-            isScreenScaled = true;
-        }
-        weaponTrailRenderer = trailRenderer;
+        //Screen scaling removed if there is a bug remember to add it back
+        weaponTrailRenderer = weaponTrailRendererNonStatic;
         weaponScript = weaponScriptNonStatic;
         Application.targetFrameRate = 60;
-        levelFinishedPanel = panelTransform;
-        sceneManagerScript = sceneManager;
-        throwControllerScript = throwController;
-        cameraMovementScript = cameraController;
+        sceneManagerScript = sceneManagerNonStatic;
+        throwControllerScript = throwControllerNonStatic;
+        cameraMovementScript = cameraMovementScriptNonStatic;
         trajectory = trajectoryNonStatic;
         tearDropSineMultiplier = tearDropSineMultiplierNonStatic;
         animController = animControllerNonStatic;
@@ -88,7 +80,7 @@ public class GameManagerScript : MonoBehaviour
 
     public static void obstacleDestroyed()
     {
-        sceneManagerScript.addTreeCut();
+        sceneManagerScript.incrementDestroyedObstacle();
         sceneManagerScript.checkSceneLoadCondition();
     }
 

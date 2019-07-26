@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/level30.unity
+- path: Assets/Scenes/AllStages/Level9.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

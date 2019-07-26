@@ -11,13 +11,11 @@ public class CameraMovementScript : MonoBehaviour
     private LayerMask groundMask;
     [SerializeField]
     private GameObject PressIndicator;
-    public static bool isTapped = false;
-    private float angleSpace = 60;
-    private float minAngle, maxAngle;
     private RaycastHit hit;
     private Vector3 firstDownPosition;
 
     private Vector3 initialForward;
+    public bool wasTouched;
     public float pullingDivider = 7.5f;
     public static float minimumAxisMultiplier = 0.5f;
     public static float maximumAxisMultiplier = 4.5f;
@@ -25,12 +23,21 @@ public class CameraMovementScript : MonoBehaviour
     void Start()
     {
         float startrot = playerObject.transform.eulerAngles.y;
-        minAngle = startrot - angleSpace / 2;
-        maxAngle = startrot + angleSpace / 2f;
         initialForward = playerObject.transform.forward;
     }
     void Update()
     {
+        /*
+#if UNITY_EDITOR
+        mouseProcess();
+#endif
+#if UNITY_ANDROID
+        touchProcess();
+#endif
+#if UNITY_IPHONE
+        touchProcess();
+#endif
+    */
         touchProcess();
     }
 
@@ -93,9 +100,6 @@ public class CameraMovementScript : MonoBehaviour
             StopCoroutine("mouseSwirl");
         }
     }
-
-    //Touch controls
-    public bool wasTouched;
     private void touchProcess()
     {
         if (!GameManagerScript.isLevelFinished)
@@ -133,28 +137,5 @@ public class CameraMovementScript : MonoBehaviour
                 wasTouched = false;
             }
         }
-    }
-
-
-    //Calculate 2d position difference for rotation
-    private float calculateRotation(Vector2 beganPos, Vector2 currentPos)
-    {
-        float val = -(beganPos.x - currentPos.x);
-        return val;
-    }
-
-    //Later use for limiting rotation of player object
-    private Vector3 getLimitedRotation(Vector3 rotation)
-    {
-        Debug.Log(rotation);
-        if (rotation.y < minAngle)
-        {
-            return new Vector3(0, minAngle, 0);
-        }
-        else if (rotation.y > maxAngle)
-        {
-            return new Vector3(0, maxAngle, 0);
-        }
-        else return rotation;
     }
 }

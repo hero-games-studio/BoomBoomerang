@@ -32,9 +32,7 @@ public class TrajectoryScript : MonoBehaviour
     {
         for (float i = 0; i < dotCount; i++)
         {
-            float alpha = 1 - (i / dotCount);
             dots[(int)i] = Instantiate(dot, pos, Quaternion.Euler(0, 0, 0), dotParent.transform);
-            dots[(int)i].GetComponent<MeshRenderer>().material.SetVector("_alpha", new Vector4(dotColor.x, dotColor.y, dotColor.z, alpha));
         }
     }
 
@@ -58,7 +56,7 @@ public class TrajectoryScript : MonoBehaviour
             Vector3 result = calcPos(i * incrementationValue) - new Vector3(10, 0, 0) * axisMultiplier;
             Quaternion rotatedVector = Quaternion.Euler(0, throwStartRot.eulerAngles.y + 90, 0);
             Vector3 direction = rotatedVector * result;
-            dots[i].transform.position = direction+correctionVector;
+            dots[i].transform.position = direction + correctionVector;
         }
     }
 
