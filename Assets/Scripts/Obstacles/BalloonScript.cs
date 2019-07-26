@@ -26,7 +26,7 @@ public class BalloonScript : BaseObstacle
         if (tag == "Weapon"|| tag == "Bomb")
         {
             basePlane.GetComponent<MeshRenderer>().enabled = false;
-            gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            //gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             if (particleEffect != null)
             {
                 particleEffect.Play();

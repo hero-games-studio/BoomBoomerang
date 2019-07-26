@@ -39,6 +39,14 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__650ee33f4e46d9446b9e53b47795d54d__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
   - __PanelContainer__rootVisualContainer__26da64360ebf55740ac9bcb9a36ee990__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
   - __PanelContainer__rootVisualContainer__26da64360ebf55740ac9bcb9a36ee990__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__771ca7de887944daa9db1d2bc1ca3e72__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__771ca7de887944daa9db1d2bc1ca3e72__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__86b77f1f194e1cb4faa4308822b5a76c__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__86b77f1f194e1cb4faa4308822b5a76c__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__552b81e4e92c74fa8866d6b26f2fecf9__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__552b81e4e92c74fa8866d6b26f2fecf9__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__2cd86c73831494bbaacac0c768105bd2__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__2cd86c73831494bbaacac0c768105bd2__MaterialGraphView__UnityEditor.Experimental.GraphView.GraphView+PersistedSelection
   m_Values:
   - '{}'
   - '{}'
@@ -54,8 +62,6 @@ MonoBehaviour:
   - '{}'
   - '{}'
   - '{}'
-  - '{"position":{"x":896.7999877929688,"y":275.20001220703127,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}}'
-  - '{"m_Version":53,"m_SelectedElementsArray":["6a4cc8d6-4110-42a7-ad6d-2adaf02e79f8"]}'
   - '{}'
   - '{}'
   - '{}'
@@ -66,3 +72,13 @@ MonoBehaviour:
   - '{}'
   - '{}'
   - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{"position":{"x":850.0,"y":360.5,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}}'
+  - '{"m_Version":1,"m_SelectedElementsArray":["bbd4a471-4aab-447e-a03c-fa858dc2a657"]}'

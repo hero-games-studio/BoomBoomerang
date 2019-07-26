@@ -8,11 +8,6 @@ public class SceneManagerScript : MonoBehaviour
 {
     [SerializeField]
     private TMP_Text text1;
-    [SerializeField]
-    private TMP_Text text2;
-    [SerializeField]
-    private Slider slider;
-
     public GameObject levelFinished;
     public GameObject[] confettiSpawnPoints;
 
@@ -48,12 +43,10 @@ public class SceneManagerScript : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex != sceneCount - 1)
         {
             text1.text = SceneManager.GetActiveScene().buildIndex.ToString();
-            text2.text = (SceneManager.GetActiveScene().buildIndex + 1).ToString();
         }
         else
         {
             text1.text = SceneManager.GetActiveScene().buildIndex.ToString();
-            text2.text = "0";
         }
         SaveSystem.save(SceneManager.GetActiveScene().buildIndex);
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, Application.version, SceneManager.GetActiveScene().buildIndex);
@@ -63,7 +56,6 @@ public class SceneManagerScript : MonoBehaviour
         {
             totalObstacleCountInScene = FindObjectsOfType<BaseObstacle>().Length;
         }
-        slider.value = destroyedObstacleCount / totalObstacleCountInScene;
     }
     private void loadNextScene()
     {
@@ -107,7 +99,6 @@ public class SceneManagerScript : MonoBehaviour
     public void incrementDestroyedObstacle()
     {
         destroyedObstacleCount++;
-        slider.value = (float)destroyedObstacleCount / (float)totalObstacleCountInScene;
     }
 
     private void invokableLoad()
