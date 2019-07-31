@@ -26,23 +26,18 @@ MonoBehaviour:
   UserMessagesFailed: 0
   CustomArea: 
   gameKey:
-  - 70891b7c5cca84bf1f594126c6cb84fc
-  - 1f4913dfb868e55d826b462698a9e463
+  - 697338ee2259f7eeb506c6a43371c01a
   secretKey:
-  - edfd4598054bf4ce5da94ac419fa90f71ca55f4d
-  - 7e36bd4683d779e270b83ca0d2064995b56bc8b6
+  - 3d8024e18d693006de3ce7634ba03aa28fe9955e
   Build:
   - 0.1
-  - 0.1
   SelectedPlatformStudio:
-  - Hero Games
-  - Hero Games
+  - Voodoo
   SelectedPlatformGame:
-  - Boom Boomerang - iOS
-  - Boom Boomerang - Android
-  SelectedPlatformGameID: 5631010058310100
-  SelectedStudio: 0200000002000000
-  SelectedGame: 0c00000007000000
+  - Boom Boomerang - iOS (MECO BILISIM PAZARLAMA SAN TIC ve AS)
+  SelectedPlatformGameID: 6c310100
+  SelectedStudio: 01000000
+  SelectedGame: 01000000
   NewVersion: 5.1.7
   Changes: '5.1.7
 
@@ -50,7 +45,7 @@ MonoBehaviour:
   SignUpOpen: 0
   StudioName: 
   GameName: 
-  EmailGA: hello@herogamestudio.com
+  EmailGA: melihcol@gmail.com
   IntroScreen: 0
   InfoLogEditor: 1
   InfoLogBuild: 1
@@ -64,7 +59,7 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: 0
-  Platforms: 0b00000008000000
+  Platforms: 08000000
   CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0
@@ -91,7 +86,7 @@ MonoBehaviour:
   IncludeGooglePlay: 1
   FpsCriticalThreshold: 20
   FpsCirticalSubmitInterval: 1
-  PlatformFoldOut: 0101
+  PlatformFoldOut: 01
   CustomDimensions01FoldOut: 0
   CustomDimensions02FoldOut: 0
   CustomDimensions03FoldOut: 0
